@@ -591,5 +591,34 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script defer src="js/data.js"></script>
     <script defer src="js/main.js"></script>
+
+    <!-- Site Protection -->
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable common keyboard shortcuts for viewing source
+        document.addEventListener('keydown', function(e) {
+            // Ctrl+U (View Source), Ctrl+Shift+I (DevTools), Ctrl+Shift+J (Console), F12
+            if ((e.ctrlKey && e.key === 'u') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+                e.key === 'F12') {
+                e.preventDefault();
+            }
+        });
+
+        // Console warning
+        console.log(
+            '%c⚠️ Warning!',
+            'color: #FF6B6B; font-size: 28px; font-weight: bold;'
+        );
+        console.log(
+            '%cThis is a protected website. Unauthorized access or modification of this site\'s code is prohibited.',
+            'color: #4A6758; font-size: 14px;'
+        );
+    </script>
 </body>
 </html>
