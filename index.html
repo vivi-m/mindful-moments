@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Moments | Daily Meditation & Wellness</title>
+    <meta name="description" content="Discover peace with guided meditations, sleep stories, and breathing exercises. Start your mindfulness journey today.">
+    <meta name="author" content="Mindful Moments">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.mindfulmoments.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mindfulmoments.com/">
+    <meta property="og:title" content="Mindful Moments | Daily Meditation & Wellness">
+    <meta property="og:description" content="Discover peace with guided meditations, sleep stories, and breathing exercises. Start your mindfulness journey today.">
+    <meta property="og:image" content="https://www.mindfulmoments.com/assets/hero-bg.webp">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.mindfulmoments.com/">
+    <meta name="twitter:title" content="Mindful Moments | Daily Meditation & Wellness">
+    <meta name="twitter:description" content="Discover peace with guided meditations, sleep stories, and breathing exercises. Start your mindfulness journey today.">
+    <meta name="twitter:image" content="https://www.mindfulmoments.com/assets/hero-bg.webp">
+
+    <!-- JSON-LD Structured Data for Local Business/Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Mindful Moments",
+      "image": "https://www.mindfulmoments.com/assets/hero-bg.webp",
+      "url": "https://www.mindfulmoments.com/",
+      "telePhone": "+15551234567",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Peace Avenue",
+        "addressLocality": "Serenity City",
+        "addressRegion": "CA",
+        "postalCode": "90210",
+        "addressCountry": "US"
+      },
+      "description": "Discover peace with guided meditations, sleep stories, and breathing exercises. Start your mindfulness journey today."
+    }
+    </script>
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="assets/hero-bg.webp" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="logo" aria-label="Mindful Moments Home">
+            <!-- New Minimalist Lotus/Leaf Logo SVG -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; color: var(--primary-green);">
+                <path d="M12 2C12 2 15 6 15 11C15 16 12 22 12 22C12 22 9 16 9 11C9 6 12 2 12 2Z"></path>
+                <path d="M12 22C12 22 16 18 19 13C22 8 22 4 22 4C22 4 18 5 13 9C12.5 9.4 12 22 12 22Z"></path>
+                <path d="M12 22C12 22 8 18 5 13C2 8 2 4 2 4C2 4 6 5 11 9C11.5 9.4 12 22 12 22Z"></path>
+            </svg>
+            Mindful Moments
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" aria-label="Go to Home">Home</a></li>
+            <li><a href="#meditations" aria-label="Go to Meditations">Meditations</a></li>
+            <li><a href="#sleep-stories" aria-label="Go to Sleep Stories">Sleep Stories</a></li>
+            <li><a href="#library" aria-label="Go to Articles & Stories">Articles & Stories</a></li>
+            <li><a href="#about-us" aria-label="Go to About">About</a></li>
+        </ul>
+        <div class="nav-actions" id="user-nav" style="display: flex; align-items: center; gap: 15px;">
+            <!-- Google Translate Element -->
+            <div id="google_translate_element" style="display: flex; align-items: center; min-height: 32px;"></div>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div id="auth-state">
+                <a href="#" class="btn btn-outline desktop-only" id="login-open-btn" aria-label="Open Login Modal">Log In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+
+        <div class="hero-content">
+            <h1 class="fade-in-up delay-1">Find Your Peace,<br>One Breath at a Time</h1>
+            <p class="fade-in-up delay-2">Guided meditations for stress relief, better sleep, and mindfulness</p>
+            <div class="hero-buttons fade-in-up delay-3">
+                <a href="#contact" class="btn btn-primary" aria-label="Start Free Trial via Sign Up Form">Start Free Trial</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section / Meditations -->
+    <section class="features" id="meditations">
+        <div class="container">
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <a href="#library" class="feature-card scroll-fade-up" style="transition-delay: 0.1s; text-decoration: none; display: block; color: inherit;">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-headphones-simple"></i>
+                    </div>
+                    <h3>Guided Sessions</h3>
+                    <p>Expert-led meditations designed to help you find focus, reduce anxiety, and cultivate daily mindfulness.</p>
+                </a>
+
+                <!-- Feature 2: Added ID for linking -->
+                <a href="#library" class="feature-card scroll-fade-up" id="sleep-stories" style="transition-delay: 0.2s; text-decoration: none; display: block; color: inherit;">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+                    <h3>Sleep Stories</h3>
+                    <p>Drift off peacefully with soothing narratives and calming soundscapes tailored for deep, restorative sleep.</p>
+                </a>
+
+                <!-- Feature 3 -->
+                <a href="#library" class="feature-card scroll-fade-up" style="transition-delay: 0.3s; text-decoration: none; display: block; color: inherit;">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3>Breathing Exercises</h3>
+                    <p>Simple but powerful breathwork techniques to quickly ground yourself and lower stress levels in minutes.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about-us" style="padding: 100px 0; background-color: var(--secondary-earth);">
+        <div class="container">
+            <h2 class="section-title scroll-fade-up" style="margin-bottom: 40px;">About Mindful Moments</h2>
+            <div class="about-content scroll-fade-up" style="transition-delay: 0.1s; text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                <p style="font-size: 1.15rem; color: var(--text-forest); opacity: 0.9; margin-bottom: 24px;">
+                    Mindful Moments was born from a simple belief: everyone deserves a quiet space to reconnect with themselves amid the noise of modern life. Our mission is to make mindfulness and meditation accessible, practical, and deeply restorative for everyone, regardless of their experience level.
+                </p>
+                <p style="font-size: 1.15rem; color: var(--text-forest); opacity: 0.9;">
+                    Whether you are seeking relief from daily stress, a pathway to better sleep, or a moment of morning clarity, we are here to support your journey. By combining expert-led insights with soothing environments, we empower you to nurture your mental well-being—one breath at a time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guided Stories / Library Section -->
+    <section class="library" id="library">
+        <div class="container">
+            <h2 class="section-title scroll-fade-up">Guided Articles & Stories</h2>
+            <div class="library-grid" id="library-grid-container">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title scroll-fade-up">Choose Your Path</h2>
+            <div class="promo-banner scroll-fade-up" style="transition-delay: 0.1s;">
+                <p>🎉 <strong>Limited Time:</strong> First month 50% off for new subscribers! (Applies to Monthly plan)</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Weekly -->
+                <div class="pricing-card scroll-fade-up" style="transition-delay: 0.2s;">
+                    <h3>Weekly</h3>
+                    <div class="price"><span>$2.99</span>/ week</div>
+                    <p class="billing">Billed weekly</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> Full access to all content</li>
+                        <li><i class="fa-solid fa-check"></i> 7-day free trial</li>
+                    </ul>
+                    <button class="btn btn-outline pricing-subscribe-btn" data-plan="weekly">Start Free Trial</button>
+                </div>
+
+                <!-- Monthly (Popular) -->
+                <div class="pricing-card popular scroll-fade-up" style="transition-delay: 0.3s;">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Monthly</h3>
+                    <div class="price"><span>$7.99</span>/ month</div>
+                    <p class="billing">Billed monthly <span class="discount">Save 20% vs weekly</span></p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> Full access to all content</li>
+                        <li><i class="fa-solid fa-check"></i> Exclusive live guided meditations</li>
+                        <li><i class="fa-solid fa-check"></i> Cancel anytime</li>
+                    </ul>
+                    <button class="btn btn-primary pricing-subscribe-btn" data-plan="monthly">Subscribe Now</button>
+                </div>
+
+                <!-- Yearly -->
+                <div class="pricing-card scroll-fade-up" style="transition-delay: 0.4s;">
+                    <h3>Yearly</h3>
+                    <div class="price"><span>$49.99</span>/ year</div>
+                    <p class="billing">Billed yearly <span class="discount">Save 40% vs monthly</span></p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> All access + 2 months free</li>
+                        <li><i class="fa-solid fa-check"></i> Offline downloads</li>
+                        <li><i class="fa-solid fa-check"></i> 1-on-1 coaching session</li>
+                    </ul>
+                    <button class="btn btn-outline pricing-subscribe-btn" data-plan="yearly">Get Yearly Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container relative">
+            <h2 class="section-title scroll-fade-up">Stories of Transformation</h2>
+            
+            <div class="review-summary scroll-fade-up">
+                <div class="summary-score">
+                    <span class="score-num" id="avg-rating">5.0</span>
+                    <div class="score-stars" id="avg-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="score-count" id="review-count">Based on 0 reviews</span>
+                </div>
+                <div class="summary-bars">
+                    <div class="rating-bar"><span>5 <i class="fa-solid fa-star"></i></span> <div class="bar-bg"><div class="bar-fill" id="bar-5"></div></div></div>
+                    <div class="rating-bar"><span>4 <i class="fa-solid fa-star"></i></span> <div class="bar-bg"><div class="bar-fill" id="bar-4"></div></div></div>
+                    <div class="rating-bar"><span>3 <i class="fa-solid fa-star"></i></span> <div class="bar-bg"><div class="bar-fill" id="bar-3"></div></div></div>
+                    <div class="rating-bar"><span>2 <i class="fa-solid fa-star"></i></span> <div class="bar-bg"><div class="bar-fill" id="bar-2"></div></div></div>
+                    <div class="rating-bar"><span>1 <i class="fa-solid fa-star"></i></span> <div class="bar-bg"><div class="bar-fill" id="bar-1"></div></div></div>
+                </div>
+            </div>
+
+            <div class="carousel-container scroll-fade-up" style="transition-delay: 0.2s;">
+                <div class="carousel-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card active">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="quote-text">"Using Mindful Moments for just 10 minutes a day has completely transformed my mornings. I feel grounded, focused, and ready to tackle whatever comes."</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="customer-info">
+                            <div class="avatar bg-sage-light"></div>
+                            <div>
+                                <h4>Sarah Jenkins</h4>
+                                <span>Freelance Designer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="quote-text">"The sleep stories are authentic magic. I've struggled with insomnia for years, but now I drift off peacefully within 15 minutes of turning on the app."</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="customer-info">
+                            <div class="avatar bg-clay-light"></div>
+                            <div>
+                                <h4>Marcus Reed</h4>
+                                <span>Software Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="quote-text">"Whenever anxiety peaks during my workday, the 3-minute breathwork exercises bring me right back to center. A truly beautiful and essential tool."</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="customer-info">
+                            <div class="avatar bg-earth-light"></div>
+                            <div>
+                                <h4>Elena Ramirez</h4>
+                                <span>Marketing Director</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <button class="carousel-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                
+                <!-- Pagination Dots -->
+                <div class="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+
+            <!-- Leave a Review Form -->
+            <div class="review-submission-container scroll-fade-up" style="margin-top: 60px; max-width: 600px; margin-left: auto; margin-right: auto; text-align: center;">
+                <h3 style="margin-bottom: 24px; font-family: var(--font-heading); color: var(--text-forest); font-size: 1.8rem;">Share Your Experience</h3>
+                <form id="live-review-form" class="review-form" style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left;">
+                    <div class="form-group" style="margin-bottom: 16px;">
+                        <input type="text" id="review-name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 16px;">
+                        <input type="text" id="review-role" class="form-control" placeholder="Your Role (Optional)">
+                    </div>
+                    
+                    <div class="form-group rating-input-group" style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px; color: var(--text-forest); font-weight: 500;">Your Rating:</label>
+                        <div class="star-rating-input" style="display: flex; gap: 8px; flex-direction: row-reverse; justify-content: flex-end;">
+                            <input type="radio" id="star5" name="rating" value="5" required style="display:none;" />
+                            <label for="star5" title="5 stars" class="star-lbl"><i class="fa-solid fa-star"></i></label>
+                            
+                            <input type="radio" id="star4" name="rating" value="4" style="display:none;" />
+                            <label for="star4" title="4 stars" class="star-lbl"><i class="fa-solid fa-star"></i></label>
+                            
+                            <input type="radio" id="star3" name="rating" value="3" style="display:none;" />
+                            <label for="star3" title="3 stars" class="star-lbl"><i class="fa-solid fa-star"></i></label>
+                            
+                            <input type="radio" id="star2" name="rating" value="2" style="display:none;" />
+                            <label for="star2" title="2 stars" class="star-lbl"><i class="fa-solid fa-star"></i></label>
+                            
+                            <input type="radio" id="star1" name="rating" value="1" style="display:none;" />
+                            <label for="star1" title="1 star" class="star-lbl"><i class="fa-solid fa-star"></i></label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 24px;">
+                        <textarea id="review-text" class="form-control" rows="4" placeholder="How has Mindful Moments helped you? Share your story..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="review-submit-btn" style="width: 100%;">
+                        <span class="btn-text">Submit Review</span>
+                        <span class="btn-loader" style="display: none;"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                    </button>
+                    <p id="review-success-msg" style="display: none; color: var(--primary-green); margin-top: 16px; font-weight: 500; text-align: center;">Thank you! Your review has been added.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title scroll-fade-up">Frequently Asked Questions</h2>
+            <div class="faq-container scroll-fade-up" style="transition-delay: 0.2s;">
+                <div class="faq-item">
+                    <button class="faq-question">What is included in the free trial? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Our 7-day free trial gives you complete, unrestricted access to our entire library of premium meditations, sleep stories, and specialized guides.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I cancel my subscription anytime? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Absolutely. You can cancel your subscription at any time from your account settings. You'll retain access until the end of your current billing cycle.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does the 50% off monthly promo work? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>When you select the Monthly plan as a new user, your first charge will be automatically discounted by 50%. Standard $7.99 pricing resumes on your second month.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info scroll-fade-up">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">Get in Touch</h2>
+                    <p>Whether you have a question about our articles or just want to share your journey, we'd love to hear from you. We operate entirely online to serve you anywhere.</p>
+                    <ul class="contact-details">
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:mindful.moments.vivi@gmail.com" style="color: var(--text-forest); text-decoration: underline;">mindful.moments.vivi@gmail.com</a></li>
+                    </ul>
+                </div>
+                
+                <div class="contact-form-container scroll-fade-up" style="transition-delay: 0.2s;">
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="your@email.com">
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="How can we help you?"></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loader" style="display: none;"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                        </button>
+                        
+                        <div class="form-success" id="form-success" style="display: none;">
+                            <i class="fa-solid fa-check-circle"></i> Thank you! Your message has been sent peacefully.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Login / Sign Up Modal -->
+    <div id="login-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-title">
+        <div class="modal-content text-center">
+            <button class="modal-close" id="login-close-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            <h2 id="login-title" class="section-title" style="margin-bottom: 24px; font-size: 2rem;">Join Mindful Moments</h2>
+            <p style="margin-bottom: 24px; opacity: 0.8;" id="login-subtitle">Sign up or Log in to continue your journey.</p>
+            
+            <form id="auth-form" class="contact-form" novalidate onsubmit="event.preventDefault();">
+                <div class="form-group" style="text-align: left;" id="name-group">
+                    <label for="auth-name">Name</label>
+                    <input type="text" id="auth-name" placeholder="Your Name">
+                </div>
+                <div class="form-group" style="text-align: left;">
+                    <label for="auth-email">Email</label>
+                    <input type="email" id="auth-email" required aria-required="true" placeholder="your@email.com">
+                </div>
+                <div class="form-group" style="text-align: left;">
+                    <label for="auth-password">Password</label>
+                    <input type="password" id="auth-password" required aria-required="true" placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn" id="auth-submit-btn">
+                    <span class="btn-text">Sign Up / Log In</span>
+                    <span class="btn-loader" style="display: none;"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Article Reader Modal -->
+    <div id="article-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="modal-close" id="article-close-btn" aria-label="Close Article"><i class="fa-solid fa-xmark"></i></button>
+            <h2 id="article-title" class="section-title" style="margin-bottom: 16px; font-size: 1.8rem;">Story Title</h2>
+            <div id="article-body" style="line-height: 1.8; color: var(--text-forest); opacity: 0.9; font-size: 1.05rem;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <br>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Setup Modal -->
+    <div id="payment-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="payment-title">
+        <div class="modal-content text-center">
+            <button class="modal-close" id="payment-close-btn" aria-label="Close Payment"><i class="fa-solid fa-xmark"></i></button>
+            <h2 id="payment-title" class="section-title" style="margin-bottom: 8px; font-size: 1.8rem;">Complete Subscription</h2>
+            <p style="margin-bottom: 24px; opacity: 0.8;" id="payment-plan-desc">You are subscribing to a Premium Plan.</p>
+            
+            <form id="payment-form" class="contact-form" novalidate onsubmit="event.preventDefault();">
+                <div class="form-group" style="text-align: left;">
+                    <label for="cc-name">Name on Card</label>
+                    <input type="text" id="cc-name" required placeholder="John Doe">
+                </div>
+                <div class="form-group" style="text-align: left;">
+                    <label for="cc-num">Card Number (Mock Data)</label>
+                    <div style="position: relative;">
+                        <input type="text" id="cc-num" required placeholder="4242 4242 4242 4242" maxlength="19">
+                        <i class="fa-brands fa-cc-visa" style="position: absolute; right: 16px; top: 16px; color: #ccc;"></i>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 16px;">
+                    <div class="form-group" style="flex: 1; text-align: left;">
+                        <label for="cc-exp">Expiry</label>
+                        <input type="text" id="cc-exp" required placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="form-group" style="flex: 1; text-align: left;">
+                        <label for="cc-cvc">CVC</label>
+                        <input type="text" id="cc-cvc" required placeholder="123" maxlength="4">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn" id="payment-submit-btn">
+                    <span class="btn-text">Process Payment</span>
+                    <span class="btn-loader" style="display: none;"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                </button>
+                <div class="form-success" id="payment-success" style="display: none; margin-top: 16px;">
+                    <i class="fa-solid fa-check-circle"></i> Payment Successful! Upgrading account...
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Section -->
+    <section class="privacy-policy" id="privacy" style="padding: 100px 0; background-color: var(--bg-color);">
+        <div class="container scroll-fade-up">
+            <h2 class="section-title">Privacy Policy</h2>
+            <div style="max-width: 800px; margin: 0 auto; color: var(--text-forest); opacity: 0.9; line-height: 1.8;">
+                <p style="margin-bottom: 24px;">At <strong>Mindful Moments</strong>, we believe in protecting your inner peace and your digital privacy equally. This policy outlines how we handle the minimal information we collect.</p>
+                
+                <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--text-dark);">1. Information We Collect</h3>
+                <p style="margin-bottom: 24px;">We only collect the information you voluntarily provide (such as your name and email address) when you subscribe, submit a live review, or contact us. Your saved preferences (like dark mode or active subscriptions) are stored locally in your browser to respect your privacy.</p>
+
+                <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--text-dark);">2. How We Use Your Information</h3>
+                <p style="margin-bottom: 24px;">The information we collect is strictly used to improve your experience on our platform, manage your subscription access, and respond to your direct inquiries. We do not sell or rent your personal data to any third parties.</p>
+
+                <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--text-dark);">3. Security & Cookies</h3>
+                <p style="margin-bottom: 24px;">We use robust security measures to protect your data. While we use local browser storage to personalize your session, we intentionally avoid invasive tracking cookies or aggressive analytics.</p>
+
+                <p><em>Last updated: March 2026. For privacy concerns, please email us directly.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paywall Warning Modal -->
+    <div id="paywall-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="paywall-title">
+        <div class="modal-content text-center">
+            <button class="modal-close" id="paywall-close-btn" aria-label="Close Paywall"><i class="fa-solid fa-xmark"></i></button>
+            <div style="font-size: 3rem; color: var(--accent-clay); margin-bottom: 16px;"><i class="fa-solid fa-lock"></i></div>
+            <h2 id="paywall-title" class="section-title" style="margin-bottom: 16px; font-size: 1.8rem;">Premium Content</h2>
+            <p style="margin-bottom: 24px; opacity: 0.8; line-height: 1.6;">This is a premium story. Please subscribe to continue reading full narratives and access expert-led series.</p>
+            <a href="#pricing" class="btn btn-primary" id="paywall-to-pricing" style="width: 100%;">View Pricing Plans</a>
+        </div>
+    </div>
+
+    <!-- Footer Section / About -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" aria-label="Mindful Moments Home">Mindful Moments</a>
+                    <p>Find your peace, one breath at a time. Join thousands of others on a journey to better mental wellness.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#meditations">Features</a></li>
+                        <li><a href="#testimonials">Stories</a></li>
+                        <li><a href="#privacy">Privacy</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Mindful</h4>
+                    <p>Subscribe for weekly mindfulness tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email address" required aria-required="true">
+                        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mindful Moments. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,zh-CN,hi,es,ar,fr,bn,pt,ru,id', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/main.js"></script>
+</body>
+</html>
